@@ -120,3 +120,30 @@ footer {
   background-color: aquamarine;
   grid-area: footer;
 }
+
+/* responsiveness toggle menu */
+
+@media (max-width: 550px) {
+
+  header .container .nav {
+    display: none;
+  }
+
+  header .container .menu-toogle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+  }
+
+  header .container .menu-toogle > div {
+    height: 2px;
+    width: 70%;
+    background-color: #25ced1;
+    margin-top: 4px;
+  }
+
+
+}
