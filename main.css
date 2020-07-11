@@ -1,0 +1,122 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #666;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-rows: 0.3fr 1fr 1fr 0.3fr;
+  grid-template-areas: "header header header" "main aside aside" "main aside aside" "footer footer footer";
+}
+
+/* part header */
+
+header {
+  background-color: #fff;
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+}
+
+header .container {
+  height: 100%;
+  width: 90%;
+  max-width: 1170px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container .title {
+  display: inline;
+  align-items: center;
+}
+
+header .container .title p {
+  margin-left: 20px;
+  position: relative;
+  font-size: 1.4rem;
+  transition-duration: 1s;
+}
+
+header .container .title p::before {
+  content: "{";
+  position: absolute;
+  left: -12px;
+  color: #25ced1;
+}
+
+header .container .title p::after {
+  content: "}";
+  position: absolute;
+  right: -12px;
+  color: #25ced1;
+}
+
+header .container .title p:hover {
+  margin: 15px;
+  padding: 0px 12px;
+  transition: all .6s ease;
+  cursor: pointer;
+  color: #666;
+}
+
+/* part header nav */
+
+header .container .nav {
+  height: 100%;
+  align-items: center;
+}
+
+header .container .nav ul {
+  margin: 0;
+  padding: 0;
+  margin-right: 20px;
+  display: flex;
+  height: 100%;
+  list-style: none;
+  align-items: center;
+}
+
+header .container .nav ul li {
+  margin-left: 30px;
+  font-size: 1.4rem;
+  position: relative;
+  transition: all .3s ease;
+}
+
+header .container .nav ul li:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+  color: #666;
+}
+
+header .container .nav ul li.active {
+  color: #666;
+  cursor: default;
+}
+
+header .container .nav ul li:first-child {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  background-color: blueviolet;
+  grid-area: main;
+}
+
+aside {
+  background-color: blue;
+  grid-area: aside;
+}
+
+footer {
+  background-color: aquamarine;
+  grid-area: footer;
+}
