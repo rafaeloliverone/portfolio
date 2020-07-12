@@ -25,6 +25,7 @@ header {
 header .container {
   height: 100%;
   width: 90%;
+  position: relative;
   max-width: 1170px;
   background-color: #fff;
   display: flex;
@@ -48,14 +49,14 @@ header .container .title p::before {
   content: "{";
   position: absolute;
   left: -12px;
-  color: #25ced1;
+  color: #7159c1;
 }
 
 header .container .title p::after {
   content: "}";
   position: absolute;
   right: -12px;
-  color: #25ced1;
+  color: #7159c1;
 }
 
 header .container .title p:hover {
@@ -63,7 +64,7 @@ header .container .title p:hover {
   padding: 0px 12px;
   transition: all .6s ease;
   cursor: pointer;
-  color: #666;
+  opacity: 0.6;
 }
 
 /* part header nav */
@@ -93,11 +94,11 @@ header .container .nav ul li {
 header .container .nav ul li:hover {
   transform: translateY(-5px);
   cursor: pointer;
-  color: #666;
+  opacity: 0.6;
 }
 
 header .container .nav ul li.active {
-  color: #666;
+  opacity: 0.4;
   cursor: default;
 }
 
@@ -119,31 +120,4 @@ aside {
 footer {
   background-color: aquamarine;
   grid-area: footer;
-}
-
-/* responsiveness toggle menu */
-
-@media (max-width: 550px) {
-
-  header .container .nav {
-    display: none;
-  }
-
-  header .container .menu-toogle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-  }
-
-  header .container .menu-toogle > div {
-    height: 2px;
-    width: 70%;
-    background-color: #25ced1;
-    margin-top: 4px;
-  }
-
-
 }
